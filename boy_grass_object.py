@@ -1,4 +1,6 @@
+import os
 from pico2d import *
+os.chdir(os.path.dirname(__file__))
 # Game object class here
 
 def handle_events():
