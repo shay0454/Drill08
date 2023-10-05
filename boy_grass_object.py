@@ -15,9 +15,26 @@ def handle_events():
 open_canvas()
 
 # initialization code
+def reset_world():
+    global running
+    running =True
+    
+
+def update_world():
+    pass
+
+
+def render_world():
+    clear_canvas()
+    update_world()
 
 # game main loop code
-
+reset_world()
+while running:
+    handle_events()
+    update_world()
+    render_world()
+    delay(0.03)
 # finalization code
 
 close_canvas()
