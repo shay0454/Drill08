@@ -2,6 +2,15 @@ import os
 from pico2d import *
 os.chdir(os.path.dirname(__file__))
 # Game object class here
+class Grass:
+    def __init__(self):
+        self.image=load_image('grass.png')
+
+    def draw(self):
+        self.image.draw(400,30)
+
+    def update(self):pass
+
 
 def handle_events():
     global running
