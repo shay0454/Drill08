@@ -14,7 +14,7 @@ class Grass:
 
 class Boy:
     def __init__(self):
-        self.x,self.y=0.90
+        self.x,self.y=0,90
         self.frame=0
         self.image=load_image('run_animation.png')
 
@@ -40,19 +40,23 @@ open_canvas()
 def reset_world():
     global running
     global grass
+    global boy
 
     running =True
     grass=Grass()
+    boy=Boy()
     
 
 def update_world():
     grass.update()
+    boy.update()
     pass
 
 
 def render_world():
     clear_canvas()
     grass.draw()
+    boy.draw()
     update_canvas()
 
 # game main loop code
